@@ -1,0 +1,33 @@
+let
+  nilla = import ../../default.nix;
+
+  result =
+    nilla.create {
+      config = {
+        inputs = {
+          nixpkgs = {
+            src = builtins.fetchTarball {
+              url = "https://github.com/NixOS/nixpkgs/archive/nixos-24.11.tar.gz";
+              sha256 = "013q5l72i020y3b7sdw1naiqwxm4h29alwlzkv4jsnb2k7qmwbdf";
+            };
+
+            loader = "legacy";
+
+            settings = {
+              args = {
+                system = "x86_64-linux";
+              };
+            };
+          };
+
+          plusultra = {
+            src = builtins.fetchTarball {
+              url = "https://github.com/jakehamilton/config/archive/main.tar.gz";
+              sha256 = "1kbk8dckcarpa5q06wb4132zky1ra07amccg0gqz8dikfl8b9xa5";
+            };
+          };
+        };
+      };
+    };
+in
+result

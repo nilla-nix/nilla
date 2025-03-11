@@ -1,0 +1,18 @@
+[
+  ./inputs/default.nix
+
+  ./util/assertions.nix
+  ./util/warnings.nix
+
+  ./loaders/default.nix
+  ./loaders/legacy.nix
+  ./loaders/flake.nix
+
+  ./systems/nixos.nix
+
+  ./builders/default.nix
+  ./builders/nixpkgs.nix
+
+  ./packages/default.nix
+  ./shells/default.nix
+]
