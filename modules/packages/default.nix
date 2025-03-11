@@ -77,6 +77,7 @@ in
           valid = lib.options.create {
             description = "Whether or not this package is invalid, along with a message.";
             type = lib.types.raw;
+            internal = true;
             writable = false;
             default.value =
               if builtins.isNull validity then
