@@ -181,6 +181,10 @@ While more options can be added in your project, here are the ones that Nilla pr
 
 The version of Nilla used in this Project.
 
+### `lib.*`
+
+A customizable instance of Aux Lib. This is useful for creating helper functions which other modules can use.
+
 ### `inputs.<name>.src`
 
 Set the source derivation for an input. This is typically fetched using `fetchTarball` inline or is taken from the output of a tool like [npins](https://github.com/andir/npins).

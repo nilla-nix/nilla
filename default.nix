@@ -13,7 +13,21 @@ in
         lib.modules.run {
           modules =
             (import ./modules)
-            ++ (lib.lists.from.any module);
+            ++ (lib.lists.from.any module)
+            ++ [
+              # We add the Lib module here so that we can use `lib` directly from its source to handle
+              # the merges rather than using the module argument which can result in recursion issues.
+              {
+                options = {
+                  lib = lib.options.create {
+                    type = lib.types.attrs.any;
+                    default.value = { };
+                    description = "An attribute set of values to be added to `lib`.";
+                    apply = value: lib.extend (final: prev: lib.attrs.mergeRecursive prev value);
+                  };
+                };
+              }
+            ];
         };
 
       config = result.config;
