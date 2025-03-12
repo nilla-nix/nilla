@@ -1,4 +1,6 @@
 [
+  ./nilla/default.nix
+
   ./inputs/default.nix
 
   ./util/assertions.nix
