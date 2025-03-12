@@ -74,8 +74,10 @@ in
                 "nilla"
               else if files ? "flake.nix" then
                 "flake"
+              else if files ? "default.nix" then
+                "legacy"
               else
-                "legacy";
+                "raw";
           };
 
           settings = lib.options.create {
