@@ -18,6 +18,8 @@ in
               # We add the Lib module here so that we can use `lib` directly from its source to handle
               # the merges rather than using the module argument which can result in recursion issues.
               {
+                __file__ = "virtual:nilla/lib";
+
                 options = {
                   lib = lib.options.create {
                     type = lib.types.attrs.any;
