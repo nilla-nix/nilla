@@ -9,6 +9,7 @@
   ./loaders/default.nix
   ./loaders/legacy.nix
   ./loaders/flake.nix
+  ./loaders/nilla.nix
 
   ./systems/nixos.nix
 
