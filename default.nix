@@ -1,7 +1,7 @@
 let
   labs = builtins.fetchTarball {
-    url = "https://git.auxolotl.org/auxolotl/labs/archive/feat/portable-submodules.tar.gz";
-    sha256 = "054bc670lcpw3sdvb3qc338dv2594x95pzp2avx67g97h7dj1wmk";
+    url = "https://git.auxolotl.org/auxolotl/labs/archive/main.tar.gz";
+    sha256 = "1irqmb4pbl7b0gaa39m5qj977p8xv3vr868h3abqify9n04jr5pj";
   };
 
   lib = import "${labs}/lib";
