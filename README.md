@@ -1,4 +1,4 @@
-# 🍦 Nilla
+<img src="https://raw.githubusercontent.com/nilla-nix/art/main/nilla-banner.svg" width="100%" alt="Nilla">
 
 > Nilla is a simple-to-use, easy-to-extend Nix framework for managing projects.
 
