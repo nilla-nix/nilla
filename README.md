@@ -282,15 +282,15 @@ The built shell for each system is automatically created and set at this locatio
 
 An attribute set of additional module arguments to pass to your system configuration.
 
-### `system.nixos.<name>.pkgs`
+### `systems.nixos.<name>.pkgs`
 
 The Nixpkgs instance to use. By default, this will use your `nixpkgs` input if one exists.
 
-### `system.nixos.<name>.modules`
+### `systems.nixos.<name>.modules`
 
 A list of modules to include in your system configuration. Often this will be `configuration.nix` and `hardware-configuration.nix`.
 
-### `system.nixos.<name>.build`
+### `systems.nixos.<name>.build`
 
 The built system configuration can be accessed here.
 
