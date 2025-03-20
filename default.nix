@@ -55,8 +55,16 @@ in
             )
             assertions;
         in
-        # Some assertions failed! Take a look at the end of the log for more information.
-        builtins.throw "\n\n${builtins.concatStringsSep "\n" formatted}";
+        (
+          # NOTE: Lix shows our error message, but it also shows a strack trace with code frames
+          # for each function along the way. We can take advantage of this to add _another_ place
+          # the user can see the error about assertions failing. These frames currently only show
+          # the evaluated line, the line before, and the line after. If this changes we may want to add some more padding above/below to increase visual clarity.
+
+          # Some assertions failed! Take a look at the end of the log for more information.
+          builtins.throw "\n\n${builtins.concatStringsSep "\n" formatted}"
+
+        );
 
       resolved =
         if builtins.length assertions > 0 then
