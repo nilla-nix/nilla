@@ -1,10 +1,7 @@
 let
-  labs = builtins.fetchTarball {
-    url = "https://git.auxolotl.org/auxolotl/labs/archive/main.tar.gz";
-    sha256 = "1irqmb4pbl7b0gaa39m5qj977p8xv3vr868h3abqify9n04jr5pj";
-  };
+  pins = import ./npins;
 
-  lib = import "${labs}/lib";
+  lib = import "${pins.labs}/lib";
 in
 {
   create = module:

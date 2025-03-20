@@ -1,0 +1,22 @@
+{
+  "pins": {
+    "labs": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://git.auxolotl.org/auxolotl/labs.git"
+      },
+      "branch": "main",
+      "revision": "5fc4fd1b5cc307e01628a0fae28f3e11714f318b",
+      "url": null,
+      "hash": "1irqmb4pbl7b0gaa39m5qj977p8xv3vr868h3abqify9n04jr5pj"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.05pre769919.354953266373/nixexprs.tar.xz",
+      "hash": "1bms3m4awb09ziis0mhhmrn7kyd66hbiyxndlh9bkgaycmswy77q"
+    }
+  },
+  "version": 3
+}
