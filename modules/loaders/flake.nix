@@ -1,9 +1,7 @@
 { lib }:
 let
-  compat = builtins.fetchTarball {
-    url = "https://git.lix.systems/lix-project/flake-compat/archive/main.tar.gz";
-    sha256 = "1zcwz5zcc3mccpaxp02sgbs27nrq4wgh2s0vij6vk23sgzh7jmi3";
-  };
+  pins = import ../../npins;
+  compat = pins.flake-compat;
 in
 {
   config = {

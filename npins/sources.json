@@ -1,5 +1,16 @@
 {
   "pins": {
+    "flake-compat": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://git.lix.systems/lix-project/flake-compat.git"
+      },
+      "branch": "main",
+      "revision": "f7a7752f237bbc59b868058f70cffd3e436b49b7",
+      "url": null,
+      "hash": "15xb7kn44qria8d6vq8cs1z3ra65y48fwj5yxbf9vf83iwpb65ls"
+    },
     "labs": {
       "type": "Git",
       "repository": {
