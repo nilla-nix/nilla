@@ -8,7 +8,7 @@ let
           nixpkgs = {
             src = builtins.fetchTarball {
               url = "https://github.com/NixOS/nixpkgs/archive/nixos-24.11.tar.gz";
-              sha256 = "013q5l72i020y3b7sdw1naiqwxm4h29alwlzkv4jsnb2k7qmwbdf";
+              sha256 = "065n9ik9c1xi7na6vcr2m5j6a3ws83l58mpwpkn120jq2ccr05qs";
             };
 
             loader = "legacy";
