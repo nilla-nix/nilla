@@ -11,11 +11,7 @@ in
             pkgs = lib.options.create {
               description = "The Nixpkgs instance to use to build the package.";
               type = lib.types.raw;
-              default.value =
-                if inputs ? nixpkgs then
-                  inputs.nixpkgs.loaded
-                else
-                  null;
+              default.value = inputs.nixpkgs.loaded or null;
             };
 
             args = lib.options.create {
@@ -30,17 +26,20 @@ in
       };
 
       build = package:
-        lib.attrs.generate
-          package.systems
-          (system:
-            let
-              pkgs = import package.settings.pkgs.path {
-                inherit system;
-                inherit (package.settings.pkgs) config overlays;
-              };
-            in
-            pkgs.callPackage package.package package.settings.args
-          );
+        if builtins.isNull package.settings.pkgs then
+          builtins.throw "[🍦 Nilla] ❌ No package set provided for package \"${package.name}\"."
+        else
+          lib.attrs.generate
+            package.systems
+            (system:
+              let
+                pkgs = import package.settings.pkgs.path {
+                  inherit system;
+                  inherit (package.settings.pkgs) config overlays;
+                };
+              in
+              pkgs.callPackage package.package package.settings.args
+            );
     };
   };
 }
