@@ -10,6 +10,7 @@
   ./loaders/legacy.nix
   ./loaders/flake.nix
   ./loaders/nilla.nix
+  ./loaders/nixpkgs.nix
   ./loaders/raw.nix
 
   ./systems/nixos.nix

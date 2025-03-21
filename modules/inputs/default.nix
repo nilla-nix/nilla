@@ -69,9 +69,13 @@ in
               let
                 contents = builtins.readDir config.src;
                 files = lib.attrs.filter (name: value: value == "regular") contents;
+                directories = lib.attrs.filter (name: value: value == "directory") contents;
+                symlinks = lib.attrs.filter (name: value: value == "symlink") contents;
               in
               if files ? "nilla.nix" then
                 "nilla"
+              else if files ? "default.nix" && directories ? "pkgs" && directories ? "lib" && symlinks ? ".version" then
+                "nixpkgs"
               else if files ? "flake.nix" then
                 "flake"
               else if files ? "default.nix" then
