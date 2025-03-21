@@ -23,7 +23,7 @@ let
           plusultra = {
             src = builtins.fetchTarball {
               url = "https://github.com/jakehamilton/config/archive/main.tar.gz";
-              sha256 = "1kbk8dckcarpa5q06wb4132zky1ra07amccg0gqz8dikfl8b9xa5";
+              sha256 = "1z50qmmc2hnqjc53cpaijxn16dlyyx5iglvi3xwri4j8dwg98fnc";
             };
           };
         };
