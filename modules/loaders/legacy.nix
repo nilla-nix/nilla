@@ -16,7 +16,12 @@ in
 
             args = lib.options.create {
               description = "Arguments to pass to the function which is loaded.";
-              type = lib.types.any;
+              # NOTE: While we can't enforce that every legacy project takes an attribute set
+              # as an argument, we can at least handle the cases where it does. Using
+              # `lib.types.attrs.any` here is necessary to avoid merging and recursion errors
+              # for projects such as Nixpkgs. The downside here is that things like lists
+              # will not be merged together, but rather the last one will be taken.
+              type = lib.types.either lib.types.attrs.any lib.types.any;
               default.value = empty;
             };
           };
