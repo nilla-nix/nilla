@@ -1,5 +1,6 @@
-{ pins, lib }:
+{ lib }:
 let
+  pins = import ../../npins;
   compat = pins.flake-compat;
 in
 {
