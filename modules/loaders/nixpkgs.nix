@@ -1,7 +1,4 @@
 { lib }:
-let
-  empty = { __empty__ = true; };
-in
 {
   config = {
     loaders.nixpkgs = {
