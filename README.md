@@ -254,7 +254,7 @@ Additional settings which are passed to the builder.
 
 The package definition function. This function is expected to return a derivation.
 
-### `packages.<name>.build.<system>`
+### `packages.<name>.result.<system>`
 
 The built package for each system is automatically created and set at this location. These are created by Nilla and are not writable.
 
@@ -274,7 +274,7 @@ Additional settings which are passed to the builder.
 
 The shell definition function. This function is expected to return a derivation.
 
-### `shells.<name>.build.<system>`
+### `shells.<name>.result.<system>`
 
 The built shell for each system is automatically created and set at this location. These are created by Nilla and are not writable.
 
@@ -290,7 +290,7 @@ The Nixpkgs instance to use. By default, this will use your `nixpkgs` input if o
 
 A list of modules to include in your system configuration. Often this will be `configuration.nix` and `hardware-configuration.nix`.
 
-### `systems.nixos.<name>.build`
+### `systems.nixos.<name>.result`
 
 The built system configuration can be accessed here.
 
