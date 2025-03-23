@@ -71,7 +71,9 @@ in
           builtins.addErrorContext "[🍦 Nilla] Some assertions failed!"
             failure
         else
-          result;
+          result.config // {
+            extend = result.extend;
+          };
     in
     withWarnings resolved;
 }

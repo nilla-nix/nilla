@@ -34,15 +34,13 @@
         in
         if
           !(builtins.isAttrs result)
-          || !(result ? config)
-          || !(result.config ? nilla)
-          || !(result.config.nilla ? version)
+          || !(result ? extend)
+          || !(result ? nilla)
+          || !(result.nilla ? version)
         then
           builtins.throw "[🍦 Nilla] Failed to load a valid Nilla project from source \"${input.src}\"."
         else
-          result.config // {
-            extend = result.extend;
-          };
+          result;
     };
   };
 }
