@@ -31,7 +31,7 @@ in
             default.value = [ ];
           };
 
-          build = lib.options.create {
+          result = lib.options.create {
             description = "The created NixOS system.";
             type = lib.types.raw;
             writable = false;

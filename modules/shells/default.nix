@@ -53,7 +53,7 @@ in
               else
                 null;
 
-            build =
+            result =
               if builtins.isNull validity then
                 builder.build shell
               else
@@ -102,11 +102,11 @@ in
                 type = lib.types.withCheck lib.types.raw (lib.types.function lib.types.derivation).check;
               };
 
-              build = lib.options.create {
+              result = lib.options.create {
                 description = "The built shell for each of its systems.";
                 type = lib.types.attrs.of lib.types.derivation;
                 writable = false;
-                default.value = build;
+                default.value = result;
               };
             };
           });
