@@ -11,7 +11,7 @@ in
             pkgs = lib.options.create {
               description = "The Nixpkgs instance to use to build the package.";
               type = lib.types.raw;
-              default.value = inputs.nixpkgs.loaded or null;
+              default.value = inputs.nixpkgs.result or null;
             };
 
             args = lib.options.create {

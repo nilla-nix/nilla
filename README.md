@@ -152,7 +152,7 @@ in
 nilla.create ({ config }:
   let
     # Get the loaded input data!
-    text = config.inputs.myinput.loaded;
+    text = config.inputs.myinput.result;
   in
   {
     # Include our module in the project.
@@ -196,6 +196,10 @@ The name of the loader to use. By default, Nilla will look at the contents of yo
 ### `inputs.<name>.settings`
 
 Settings which can be applied to a loader. Each loader implements its own `settings` type, so the value may differ between different input types.
+
+### `inputs.<name>.result`
+
+The loaded form of the input. Each input may be loaded differently depending on which loader is used.
 
 ### `loaders.<name>.settings.type`
 

@@ -20,7 +20,7 @@ in
             type = lib.types.raw;
             default.value =
               if inputs ? nixpkgs then
-                inputs.nixpkgs.loaded
+                inputs.nixpkgs.result
               else
                 null;
           };

@@ -27,7 +27,7 @@ let
           builder = "nixpkgs";
 
           settings = {
-            pkgs = config.inputs.nixpkgs.loaded;
+            pkgs = config.inputs.nixpkgs.result;
 
             args = { };
 

@@ -6,7 +6,7 @@ let
 
 	module = { config, lib }:
 		let
-			pkgs = config.inputs.nixpkgs.loaded;
+			pkgs = config.inputs.nixpkgs.result;
 		in
 		{
 			config = {

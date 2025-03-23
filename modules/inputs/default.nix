@@ -49,7 +49,7 @@ in
           else
             null;
 
-        loaded =
+        result =
           if builtins.isNull validity then
             loader.load input
           else
@@ -107,11 +107,11 @@ in
               };
           };
 
-          loaded = lib.options.create {
+          result = lib.options.create {
             description = "The loaded form of this input.";
             type = lib.types.raw;
             writable = false;
-            default.value = loaded;
+            default.value = result;
           };
         };
       })
