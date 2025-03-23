@@ -109,7 +109,7 @@ To get started writing your own modules, it is a good idea to first familiarize 
 - Module arguments are always dynamic and do not require `...`.
 - To include additional modules you can use the attribute `includes` (unlike Nixpkgs' `imports`).
 - To exclude certain modules you can use the attribute `excludes` (unlike Nixpkgs' `disabledModules`).
-- Aux Lib's module system uses the `fallback` attribute of a module or submodule to declare the fallback type for dynamically assigned values (unlike Nixpkgs' `freeformType`).
+- Aux Lib's module system uses the `freeform` attribute of a module or submodule to declare the fallback type for dynamically assigned values (unlike Nixpkgs' `freeformType`).
 - Module shorthand is now only possible in submodules which explicitly opt-in to the feature.
 - Module arguments have been separated into `static` and `dynamic` attribute sets to make it clear which can change.
 - Options are created using `lib.options.create` (unlike Nixpkgs' `lib.mkOption`).
