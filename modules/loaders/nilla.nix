@@ -30,7 +30,12 @@
             if input.settings.extend == { } then
               value
             else
-              value.extend input.settings.extend;
+              let
+                customized = value.extend input.settings.extend;
+              in
+              customized.config // {
+                extend = customized.extend;
+              };
         in
         if
           !(builtins.isAttrs result)
