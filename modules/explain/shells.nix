@@ -29,13 +29,14 @@ let
     description = "Shells are development environments which can be used with `nilla shell`.";
 
     data = {
-      columns = [ "Systems" ];
+      columns = [ "Name" "Systems" ];
       rows = lib.attrs.mapToList
         (name: shell:
           let
             info = getShellInfo name shell;
           in
           [
+            info.name
             info.systems
           ]
         )
