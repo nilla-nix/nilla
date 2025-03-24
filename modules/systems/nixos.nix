@@ -19,8 +19,11 @@ in
             description = "The Nixpkgs instance to use.";
             type = lib.types.raw;
             default.value =
-              if inputs ? nixpkgs then
-                inputs.nixpkgs.result
+              if
+                inputs ? nixpkgs
+                && inputs.nixpkgs.result ? x86_64-linux
+              then
+                inputs.nixpkgs.result.x86_64-linux
               else
                 null;
           };
