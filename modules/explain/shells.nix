@@ -54,8 +54,8 @@ let
           inherit (info) name description;
 
           data = {
-            columns = [ "Systems" ];
-            rows = [ [ info.systems ] ];
+            columns = [ "Name" "Systems" ];
+            rows = [ [ info.name info.systems ] ];
           };
         };
       }
