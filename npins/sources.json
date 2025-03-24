@@ -18,9 +18,9 @@
         "url": "https://git.auxolotl.org/auxolotl/labs.git"
       },
       "branch": "main",
-      "revision": "5fc4fd1b5cc307e01628a0fae28f3e11714f318b",
+      "revision": "c30f94972c84c5c758b705e4363f624e75560916",
       "url": null,
-      "hash": "1irqmb4pbl7b0gaa39m5qj977p8xv3vr868h3abqify9n04jr5pj"
+      "hash": "1c2c1z3y6ya576rjlmpnxvh78s43clan1mch5cadvmzkjgd1r33d"
     },
     "nixpkgs": {
       "type": "Channel",

@@ -33,12 +33,12 @@ in
             package.systems
             (system:
               let
-                pkgs = import package.settings.pkgs.path {
-                  inherit system;
-                  inherit (package.settings.pkgs) config overlays;
-                };
+                pkgs = package.settings.pkgs.${system};
               in
-              pkgs.callPackage package.package package.settings.args
+              if !(package.settings.pkgs ? ${system}) then
+                builtins.throw "[🍦 Nilla] ❌ No package set for system \"${system}\" provided for package \"${package.name}\"."
+              else
+                pkgs.callPackage package.package package.settings.args
             );
     };
   };

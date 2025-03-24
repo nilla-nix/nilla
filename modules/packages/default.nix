@@ -16,6 +16,7 @@ in
       module = ({ config, name }:
         let
           package = {
+            inherit name;
             inherit (config) systems builder settings package;
           };
 

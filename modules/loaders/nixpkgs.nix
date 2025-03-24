@@ -8,10 +8,23 @@
           modules = [
             {
               options = {
-                system = lib.options.create {
+                systems = lib.options.create {
                   description = "The system to build the package set for.";
-                  type = lib.types.string;
-                  default.value = "x86_64-linux";
+                  type = lib.types.list.required lib.types.string;
+                  default.value = [
+                    # NOTE: These systems are defaulted to the ones that Nixpkgs specifies as
+                    # `lib.systems.flakeExposed`. They may need to be modified in the future.
+                    "x86_64-linux"
+                    "aarch64-linux"
+                    "x86_64-darwin"
+                    "armv6l-linux"
+                    "armv7l-linux"
+                    "i686-linux"
+                    "aarch64-darwin"
+                    "powerpc64le-linux"
+                    "riscv64-linux"
+                    "x86_64-freebsd"
+                  ];
                 };
 
                 overlays = lib.options.create {
@@ -35,10 +48,22 @@
         default = { };
       };
 
-      load = input: import input.src {
-        inherit (input.settings) system overlays;
-        config = input.settings.configuration;
-      };
+      load = input:
+        let
+          pkgs =
+            lib.attrs.generate
+              input.settings.systems
+              (system:
+                import input.src {
+                  inherit system;
+                  inherit (input.settings) overlays;
+                  config = input.settings.configuration;
+                }
+              );
+        in
+        pkgs // {
+          lib = import "${input.src}/lib";
+        };
     };
   };
 }
