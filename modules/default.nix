@@ -20,4 +20,10 @@
 
   ./packages/default.nix
   ./shells/default.nix
+
+  ./explain/default.nix
+  ./explain/lib.nix
+  ./explain/inputs.nix
+  ./explain/packages.nix
+  ./explain/shells.nix
 ]

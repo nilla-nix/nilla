@@ -7,6 +7,16 @@ let
       inherit name;
     })
     config.loaders;
+
+  customLoaders = builtins.filter
+    (loader: !(builtins.elem loader.name [
+      "flake"
+      "legacy"
+      "nilla"
+      "nixpkgs"
+      "raw"
+    ]))
+    loaders;
 in
 {
   options.inputs = lib.options.create {
@@ -15,6 +25,7 @@ in
     type = lib.types.attrs.lazy (lib.types.submodule ({ config, name }:
       let
         input = {
+          inherit name;
           inherit (config) src loader settings;
         };
 
@@ -71,8 +82,15 @@ in
                 files = lib.attrs.filter (name: value: value == "regular") contents;
                 directories = lib.attrs.filter (name: value: value == "directory") contents;
                 symlinks = lib.attrs.filter (name: value: value == "symlink") contents;
+
+                matching = builtins.filter
+                  (loader: loader.check input)
+                  customLoaders;
+                loader = builtins.head matching;
               in
-              if files ? "nilla.nix" then
+              if builtins.length matching != 0 then
+                loader.name
+              else if files ? "nilla.nix" then
                 "nilla"
               else if files ? "default.nix" && directories ? "pkgs" && directories ? "lib" && symlinks ? ".version" then
                 "nixpkgs"
@@ -88,6 +106,12 @@ in
             description = "Additional configuration to use when loading this input.";
             type = loader.settings.type;
             default.value = loader.settings.default;
+          };
+
+          check = lib.options.create {
+            description = "A function which checks to see if an input can be loaded by this loader. This is only used when automatically detecting an input's loader. Setting the loader attribute on an input manually will ensure that specific loader is used.";
+            type = lib.types.function lib.types.bool;
+            default.value = lib.fp.const false;
           };
 
           valid = lib.options.create {
