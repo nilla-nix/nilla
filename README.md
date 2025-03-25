@@ -63,14 +63,14 @@ nilla.create {
           sha256 = "0000000000000000000000000000000000000000000000000000";
         };
 
-        loader = "legacy";
+        # Nilla will auto-detect the loader, but for this example we will set it manually.
+        loader = "nixpkgs";
 
         settings = {
-          args = {
-            # The loaded form of this input will be for x86_64-linux systems, but don't worry,
-            # our packages, shells, and other needs will handle multiple systems without an issue.
-            system = "x86_64-linux";
-          };
+            # The loaded form of this input will be for these systems. Then our packages,
+            # shells, and other items can use these package sets.
+            # By default this will be set to the same systems as Nixpkgs exposes for its flake interface.
+            systems = [ "x86_64-linux" "aarch64-linux" ];
         };
       };
     };
