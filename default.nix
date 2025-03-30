@@ -1,7 +1,7 @@
 let
   pins = import ./npins;
 
-  lib = import "${pins.labs}/lib";
+  lib = import pins.lib;
 in
 {
   create = module:

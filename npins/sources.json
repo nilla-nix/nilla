@@ -11,16 +11,16 @@
       "url": null,
       "hash": "15xb7kn44qria8d6vq8cs1z3ra65y48fwj5yxbf9vf83iwpb65ls"
     },
-    "labs": {
+    "lib": {
       "type": "Git",
       "repository": {
         "type": "Git",
-        "url": "https://git.auxolotl.org/auxolotl/labs.git"
+        "url": "git+ssh://forgejo@git.auxolotl.org/auxolotl/lib.git"
       },
       "branch": "main",
-      "revision": "c30f94972c84c5c758b705e4363f624e75560916",
+      "revision": "7552ab48bb394d59d2bf1f7a558d28ce59da524d",
       "url": null,
-      "hash": "1c2c1z3y6ya576rjlmpnxvh78s43clan1mch5cadvmzkjgd1r33d"
+      "hash": "0705fm00k9f95b6idf5qnfvqm4qf1a0cv966ghgd48kd1qy4il5c"
     },
     "nixpkgs": {
       "type": "Channel",

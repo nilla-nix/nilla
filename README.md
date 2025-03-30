@@ -102,7 +102,7 @@ Try running the `hello` command once the development shell is open!
 
 ## How do I customize my configuration?
 
-Nilla uses [Aux Lib](https://git.auxolotl.org/auxolotl/labs/src/branch/main/lib), a standalone library that provides many common Nix helpers as well as a module system implementation. This means that to create your own module options and configuration, you will be using this library. Thankfully, though, it is quite similar to Nixpkgs and the parts that are different are designed to be easily and quickly discoverable. All features of the library are grouped into namespaces which make the tools more approachable. For example, if you need to transform an attribute set into a list then you can use `lib.attrs.mapToList`.
+Nilla uses [Aux Lib](https://git.auxolotl.org/auxolotl/lib), a standalone library that provides many common Nix helpers as well as a module system implementation. This means that to create your own module options and configuration, you will be using this library. Thankfully, though, it is quite similar to Nixpkgs and the parts that are different are designed to be easily and quickly discoverable. All features of the library are grouped into namespaces which make the tools more approachable. For example, if you need to transform an attribute set into a list then you can use `lib.attrs.mapToList`.
 
 To get started writing your own modules, it is a good idea to first familiarize yourself with some differences between the module system provided by Aux Lib and the one you may know from Nixpkgs. Here are some important highlights (note how many are just good quality of life improvements)!
 
