@@ -15,7 +15,7 @@
       "type": "Git",
       "repository": {
         "type": "Git",
-        "url": "git+ssh://forgejo@git.auxolotl.org/auxolotl/lib.git"
+        "url": "https://git.auxolotl.org/auxolotl/lib.git"
       },
       "branch": "main",
       "revision": "7552ab48bb394d59d2bf1f7a558d28ce59da524d",
