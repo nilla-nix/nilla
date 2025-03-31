@@ -13,8 +13,6 @@
   ./loaders/nixpkgs.nix
   ./loaders/raw.nix
 
-  ./systems/nixos.nix
-
   ./builders/default.nix
   ./builders/nixpkgs.nix
 

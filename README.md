@@ -282,22 +282,6 @@ The shell definition function. This function is expected to return a derivation.
 
 The built shell for each system is automatically created and set at this location. These are created by Nilla and are not writable.
 
-### `systems.nixos.<name>.args`
-
-An attribute set of additional module arguments to pass to your system configuration.
-
-### `systems.nixos.<name>.pkgs`
-
-The Nixpkgs instance to use. By default, this will use your `nixpkgs` input if one exists.
-
-### `systems.nixos.<name>.modules`
-
-A list of modules to include in your system configuration. Often this will be `configuration.nix` and `hardware-configuration.nix`.
-
-### `systems.nixos.<name>.result`
-
-The built system configuration can be accessed here.
-
 ## How can I contribute?
 
 Firstly, thank you, because you already are! By giving Nilla a try you're helping to find its quirks. Sharing your feedback on the [Discussions Board](https://github.com/nilla-nix/nilla/discussions) is a great way to give back after taking Nilla for a test drive. If you have more time to spend helping with the project, then any of the following things are welcome pull requests:
