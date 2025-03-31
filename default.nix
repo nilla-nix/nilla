@@ -3,7 +3,7 @@ let
 
   lib = import pins.lib;
 in
-{
+rec {
   create = module:
     let
       result =
@@ -76,4 +76,7 @@ in
           };
     in
     withWarnings resolved;
+
+  defaultNix = { proj, package ? "default" }: (import proj).packages.${package}.result.${builtins.currentSystem};
+  shellNix = { proj, shell ? "default" }: (import proj).shells.${shell}.result.${builtins.currentSystem};
 }

@@ -173,6 +173,50 @@ nilla.create ({ config }:
 })
 ```
 
+## Is there a `flake-compat` for Nilla?
+
+Yes! Nilla provides `defaultNix` and `shellNix`, which allow consumers of your project to use `nix-build` or `nix-shell` like they usually would.
+
+To make use of these, create a `default.nix` and/or `shell.nix` containing the following:
+
+### `default.nix`
+
+```nix
+let
+  # Alternatively, get your Nilla instance from npins, niv, or whatever pinning solution you're using.
+  nilla = import (builtins.fetchTarball {
+    url = "https://github.com/nilla-nix/nilla/archive/main.tar.gz";
+    sha256 = "0000000000000000000000000000000000000000000000000000";
+  });
+in
+nilla.defaultNix {
+  proj = ./nilla.nix;
+
+  # `defaultNix` uses a package named `default` by default.
+  # To change this, set `package`:
+  package = "hello";
+}
+```
+
+### `shell.nix`
+
+```nix
+let
+  # Alternatively, get your Nilla instance from npins, niv, or whatever pinning solution you're using.
+  nilla = import (builtins.fetchTarball {
+    url = "https://github.com/nilla-nix/nilla/archive/main.tar.gz";
+    sha256 = "0000000000000000000000000000000000000000000000000000";
+  });
+in
+nilla.shellNix {
+  proj = ./nilla.nix;
+
+  # `shelltNix` uses a shell named `default` by default.
+  # To change this, set `shell`:
+  package = "myshell";
+}
+```
+
 ## What options are available out of the box?
 
 While more options can be added in your project, here are the ones that Nilla provides by default. Note that all of the modules which declare these options can be disabled using `excludes` in your project if you want to do something another way!
