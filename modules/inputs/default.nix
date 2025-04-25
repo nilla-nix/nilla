@@ -108,12 +108,6 @@ in
             default.value = loader.settings.default;
           };
 
-          check = lib.options.create {
-            description = "A function which checks to see if an input can be loaded by this loader. This is only used when automatically detecting an input's loader. Setting the loader attribute on an input manually will ensure that specific loader is used.";
-            type = lib.types.function lib.types.bool;
-            default.value = lib.fp.const false;
-          };
-
           valid = lib.options.create {
             description = "Whether or not this input is invalid, along with a message.";
             type = lib.types.raw;

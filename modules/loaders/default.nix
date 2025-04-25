@@ -19,6 +19,12 @@
             };
           };
 
+          check = lib.options.create {
+            description = "A function which checks to see if an input can be loaded by this loader. This is only used when automatically detecting an input's loader. Setting the loader attribute on an input manually will ensure that specific loader is used.";
+            type = lib.types.function lib.types.bool;
+            default.value = lib.fp.const false;
+          };
+
           load = lib.options.create {
             description = "A function responsible for loading the input.";
             # NOTE:The return type here needs to be somethign that does not cause an eval on the value to
