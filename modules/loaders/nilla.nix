@@ -13,7 +13,7 @@
 
             extend = lib.options.create {
               description = "Arguments to pass to the function which is loaded.";
-              type = lib.types.any;
+              type = lib.types.attrs.of lib.types.raw;
               default.value = { };
             };
           };

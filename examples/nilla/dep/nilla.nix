@@ -1,5 +1,5 @@
 let
-  nilla = import ../../default.nix;
+  nilla = import ../../../default.nix;
 
   result =
     nilla.create ({ config }: {
@@ -25,9 +25,11 @@ let
 
           };
 
-          shell = { mkShell, hello, ... }:
+          shell = { pkgs, mkShell, hello, ... }:
             mkShell {
               packages = [ hello ];
+
+              shellHook = "echo '\n\nNixpkgs v${pkgs.lib.version}\n\n'";
             };
         };
       };

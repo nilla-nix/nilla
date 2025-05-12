@@ -70,7 +70,7 @@ in
         options = {
           src = lib.options.create {
             description = "The source directory for this input.";
-            type = lib.types.derivation;
+            type = lib.types.either lib.types.derivation lib.types.path;
           };
 
           loader = lib.options.create {
