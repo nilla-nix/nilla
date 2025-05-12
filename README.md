@@ -162,8 +162,8 @@ nilla.create ({ config }:
       inputs = {
         myinput = {
           # An input's source can be fetched, but in this simple example let's use a directory
-          # located at `./my/input`. We can add this as a source by turning the path into a derivation.
-          src = lib.paths.into.drv ./my/input;
+          # located at `./my/input`.
+          src = ./my/input;
 
           # Specify our loader's name so it is used.
           loader = "hello";
