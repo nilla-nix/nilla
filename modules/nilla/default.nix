@@ -5,7 +5,7 @@
       description = "The version of Nilla used.";
       type = lib.types.string;
       writable = false;
-      default.value = "0.0.0-alpha.10";
+      default.value = "0.0.0-alpha.11";
     };
   };
 }
