@@ -1,15 +1,20 @@
 {
   "pins": {
     "flake-compat": {
-      "type": "Git",
+      "type": "GitRelease",
       "repository": {
-        "type": "Git",
-        "url": "https://git.lix.systems/lix-project/flake-compat.git"
+        "type": "GitHub",
+        "owner": "nilla-nix",
+        "repo": "flake-compat"
       },
-      "branch": "main",
-      "revision": "f7a7752f237bbc59b868058f70cffd3e436b49b7",
-      "url": null,
-      "hash": "15xb7kn44qria8d6vq8cs1z3ra65y48fwj5yxbf9vf83iwpb65ls"
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.0.0",
+      "revision": "dbf20f0c749460e68536dc14281abe58a7f4a206",
+      "url": "https://api.github.com/repos/nilla-nix/flake-compat/tarball/v0.0.0",
+      "hash": "0i5b1776k591sz1qdjcyq80zamrsya4xpgk9313jd27aibhr9wpb"
     },
     "lib": {
       "type": "Git",
@@ -18,6 +23,7 @@
         "url": "https://git.auxolotl.org/auxolotl/lib.git"
       },
       "branch": "main",
+      "submodules": false,
       "revision": "7552ab48bb394d59d2bf1f7a558d28ce59da524d",
       "url": null,
       "hash": "0705fm00k9f95b6idf5qnfvqm4qf1a0cv966ghgd48kd1qy4il5c"
@@ -29,5 +35,5 @@
       "hash": "1bms3m4awb09ziis0mhhmrn7kyd66hbiyxndlh9bkgaycmswy77q"
     }
   },
-  "version": 3
+  "version": 5
 }

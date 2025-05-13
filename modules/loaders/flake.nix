@@ -14,6 +14,12 @@ in
               type = lib.types.string;
               default.value = "flake.nix";
             };
+
+            inputs = lib.options.create {
+              description = "Inputs to replace in the loaded flake.";
+              type = lib.types.attrs.of lib.types.raw;
+              default.value = { };
+            };
           };
         };
 
@@ -22,9 +28,13 @@ in
 
       load = input:
         let
-          value = import compat { src = builtins.dirOf "${input.src}/${input.settings.target}"; };
+          value = compat.load {
+            src = builtins.dirOf "${input.src}/${input.settings.target}";
+
+            replacements = input.settings.inputs;
+          };
         in
-        value.defaultNix;
+        value;
     };
   };
 }
