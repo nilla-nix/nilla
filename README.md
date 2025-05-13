@@ -2,26 +2,28 @@
 
 > Nilla is a simple-to-use, easy-to-extend Nix framework for managing projects.
 
-| Feature              | Nilla    | Flakes | Legacy |
-| -------------------- | -------- | ------ | ------ |
-| Pinnable inputs      | ✔️       | ✔️     | ❌     |
-| Input loaders        | ✔️       | ❌     | ❌     |
-| Minimal boilerplate  | ✔️       | ❌     | ✔️     |
-| Configurable inputs  | ✔️       | ❌     | ⚠️\*   |
-| Extensible           | ✔️       | ❌     | ❌     |
-| Lazy                 | ✔️       | ⚠️\*\* | ✔️     |
-| Available OOTB       | ✔️       | ❌     | ✔️     |
-| Nixpkgs-agnostic     | ✔️       | ❌     | ✔️     |
-| Type checked         | ✔️       | ❌     | ❌     |
-| Configurable systems | ✔️       | ❌     | ❌     |
-| Defined schema       | ✔️       | ✔️     | ❌     |
-| Stable               | ⚠️\*\*\* | ❌     | ✔️     |
+| Feature              | Nilla    | Flakes     | Legacy |
+| -------------------- | -------- | ---------- | ------ |
+| Pinnable inputs      | ✔️       | ✔️         | ❌     |
+| Input loaders        | ✔️       | ❌         | ❌     |
+| Minimal boilerplate  | ✔️       | ❌         | ✔️     |
+| Configurable inputs  | ✔️       | ❌         | ⚠️\*   |
+| Extensible           | ✔️       | ❌         | ❌     |
+| Lazy                 | ✔️       | ⚠️\*\*     | ✔️     |
+| Available OOTB       | ✔️       | ❌         | ✔️     |
+| Nixpkgs-agnostic     | ✔️       | ❌         | ✔️     |
+| Type checked         | ✔️       | ❌         | ❌     |
+| Configurable systems | ✔️       | ❌         | ❌     |
+| Defined schema       | ✔️       | ✔️         | ❌     |
+| Stable               | ⚠️\*\*\* | ⚠️\*\*\*\* | ✔️     |
 
 ⚠️\* Legacy configuration using `default.nix` and `shell.nix` can only accept dynamic values via function attributes during instantiation, dramatically limiting what can be modified by consumers of a project.
 
 ⚠️\*\* Flakes have a work-in-progress feature "Lazy Trees" which hopes to address its input laziness shortcoming. However, this feature is not yet available.
 
 ⚠️\*\*\* Nilla isn't stable... yet! We are moving towards a 1.0.0 stability guarantee, but for now it is expected that some things will be broken or change as development continues on pre-1.0 versions.
+
+⚠️\*\*\*\* Flakes are widely used but remain an experimental feature of Nix subject to change.
 
 ## Why Nilla?
 
