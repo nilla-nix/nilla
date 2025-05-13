@@ -11,10 +11,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v0.0.0",
-      "revision": "dbf20f0c749460e68536dc14281abe58a7f4a206",
-      "url": "https://api.github.com/repos/nilla-nix/flake-compat/tarball/v0.0.0",
-      "hash": "0i5b1776k591sz1qdjcyq80zamrsya4xpgk9313jd27aibhr9wpb"
+      "version": "v0.0.1",
+      "revision": "bc451c15eff26066f782acfdefd9e5c4158572d1",
+      "url": "https://api.github.com/repos/nilla-nix/flake-compat/tarball/v0.0.1",
+      "hash": "090xac2fwbkn4q12pmbqqc628v34kxv91184hx6lsixqgghn88vf"
     },
     "lib": {
       "type": "Git",
