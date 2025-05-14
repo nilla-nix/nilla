@@ -17,15 +17,20 @@
       "hash": "165xl96d5f2xaawyiaj3cl8ccisrjvx5b1db8nfh18swaxyzdckn"
     },
     "lib": {
-      "type": "Git",
+      "type": "GitRelease",
       "repository": {
-        "type": "Git",
-        "url": "https://git.auxolotl.org/auxolotl/lib.git"
+        "type": "Forgejo",
+        "server": "https://git.auxolotl.org/",
+        "owner": "auxolotl",
+        "repo": "lib"
       },
-      "branch": "main",
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
       "submodules": false,
-      "revision": "7552ab48bb394d59d2bf1f7a558d28ce59da524d",
-      "url": null,
+      "version": "v1.0.0",
+      "revision": "4880d26e9a63c2722f2a9e3c6ce7aef161a5ac8a",
+      "url": "https://git.auxolotl.org/api/v1/repos/auxolotl/lib/archive/v1.0.0.tar.gz",
       "hash": "0705fm00k9f95b6idf5qnfvqm4qf1a0cv966ghgd48kd1qy4il5c"
     },
     "nixpkgs": {
