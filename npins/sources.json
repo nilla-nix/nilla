@@ -14,7 +14,7 @@
       "version": "v0.0.2",
       "revision": "2653659fb5d86f2853caae1b6475e63e8c23439c",
       "url": "https://api.github.com/repos/nilla-nix/flake-compat/tarball/v0.0.2",
-      "hash": "165xl96d5f2xaawyiaj3cl8ccisrjvx5b1db8nfh18swaxyzdckn"
+      "hash": "sha256-drL2fVdcowCdRauFVfqWWUfGEGVDqui5Ul240kyivZg="
     },
     "lib": {
       "type": "GitRelease",
@@ -31,14 +31,14 @@
       "version": "v1.0.0",
       "revision": "4880d26e9a63c2722f2a9e3c6ce7aef161a5ac8a",
       "url": "https://git.auxolotl.org/api/v1/repos/auxolotl/lib/archive/v1.0.0.tar.gz",
-      "hash": "0705fm00k9f95b6idf5qnfvqm4qf1a0cv966ghgd48kd1qy4il5c"
+      "hash": "sha256-rNBIPA5tItIefMakzYAKDpOKt7O4uBbNKsmlCUB1BRw="
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
       "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.05pre769919.354953266373/nixexprs.tar.xz",
-      "hash": "1bms3m4awb09ziis0mhhmrn7kyd66hbiyxndlh9bkgaycmswy77q"
+      "hash": "sha256-+BzPdWVevbkSpM12Hxc0pvl5bK4QVqBj/Aksrkgduq4="
     }
   },
-  "version": 5
+  "version": 6
 }
