@@ -28,10 +28,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.0.0",
-      "revision": "4880d26e9a63c2722f2a9e3c6ce7aef161a5ac8a",
-      "url": "https://git.auxolotl.org/api/v1/repos/auxolotl/lib/archive/v1.0.0.tar.gz",
-      "hash": "sha256-rNBIPA5tItIefMakzYAKDpOKt7O4uBbNKsmlCUB1BRw="
+      "version": "v1.0.1",
+      "revision": "5158499e95b69dfbaa48baadd2e8e25568938657",
+      "url": "https://git.auxolotl.org/api/v1/repos/auxolotl/lib/archive/v1.0.1.tar.gz",
+      "hash": "sha256-xfEIYhQzCPzo9SWs7uSAw8SnkwAwCZusDCgyzNFCmZ8="
     },
     "nixpkgs": {
       "type": "Channel",
