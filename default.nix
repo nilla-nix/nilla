@@ -27,6 +27,11 @@ in
                 };
               }
             ];
+          args = {
+            inputs = builtins.mapAttrs
+              (name: value: value.result)
+              config.inputs;
+          };
         };
 
       config = result.config;
