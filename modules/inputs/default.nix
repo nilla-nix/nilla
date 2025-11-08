@@ -1,6 +1,6 @@
 { lib, config }:
 let
-  cfg = config.inputs;
+  cfg = lib.attrs.filter (n: v: n != "__functor") config.inputs;
 
   loaders = lib.attrs.mapToList
     (name: loader: loader // {
