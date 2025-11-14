@@ -4,7 +4,7 @@ let
   nilla = import "${root}/default.nix";
 
   result =
-    nilla.create ({ lib, config }: {
+    nilla.create ({ lib, inputs }: {
       config = {
         inputs = {
           dep = {
@@ -25,7 +25,7 @@ let
         };
 
         shells.default =
-          config.inputs.dep.result.shells.default;
+          inputs.dep.shells.default;
       };
     });
 in

@@ -151,10 +151,10 @@ let
     sha256 = "0000000000000000000000000000000000000000000000000000";
   });
 in
-nilla.create ({ config }:
+nilla.create ({ config, inputs }:
   let
     # Get the loaded input data!
-    text = config.inputs.myinput.result;
+    text = inputs.myinput;
   in
   {
     # Include our module in the project.

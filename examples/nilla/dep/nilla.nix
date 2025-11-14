@@ -2,7 +2,7 @@ let
   nilla = import ../../../default.nix;
 
   result =
-    nilla.create ({ config }: {
+    nilla.create ({ config, inputs }: {
       config = {
         inputs = {
           nixpkgs = {
@@ -19,7 +19,7 @@ let
           builder = "nixpkgs";
 
           settings = {
-            pkgs = config.inputs.nixpkgs.result;
+            pkgs = inputs.nixpkgs;
 
             args = { };
 
