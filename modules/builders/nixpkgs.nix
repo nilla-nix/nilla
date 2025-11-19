@@ -16,7 +16,7 @@ in
 
             args = lib.options.create {
               description = "Arguments to pass to the builder.";
-              type = lib.types.any;
+              type = lib.types.attrs.of lib.types.raw;
               default.value = { };
             };
           };
