@@ -132,19 +132,12 @@ in
             description = "The loaded form of this input.";
             type = lib.types.raw;
             writable = false;
-            default.value = result;
+            default.value = if !config.valid.value
+                            then config.valid.message
+                            else result;
           };
         };
       })
     );
-  };
-
-  config = {
-    assertions = lib.attrs.mapToList
-      (name: input: {
-        assertion = input.valid.value;
-        message = input.valid.message;
-      })
-      cfg;
   };
 }

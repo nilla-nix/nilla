@@ -105,19 +105,12 @@ in
               description = "The built package for each of its systems.";
               type = lib.types.attrs.of lib.types.derivation;
               writable = false;
-              default.value = result;
+              default.value = if !config.valid.value
+                              then config.valid.message
+                              else result;
             };
           };
         });
     });
-  };
-
-  config = {
-    assertions = lib.attrs.mapToList
-      (name: package: {
-        assertion = package.valid.value;
-        message = package.valid.message;
-      })
-      cfg;
   };
 }
