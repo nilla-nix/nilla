@@ -28,17 +28,17 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v1.0.1",
-      "revision": "5158499e95b69dfbaa48baadd2e8e25568938657",
-      "url": "https://git.auxolotl.org/api/v1/repos/auxolotl/lib/archive/v1.0.1.tar.gz",
-      "hash": "sha256-xfEIYhQzCPzo9SWs7uSAw8SnkwAwCZusDCgyzNFCmZ8="
+      "version": "v1.1.0",
+      "revision": "6701587e5936187665312fd259d680edb4a2b2c9",
+      "url": "https://git.auxolotl.org/api/v1/repos/auxolotl/lib/archive/v1.1.0.tar.gz",
+      "hash": "sha256-HWG8KSe51gOu0/hSjIwnu6H4pYzZrsWyYjN1Z63XhlY="
     },
     "nixpkgs": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
       "artifact": "nixexprs.tar.xz",
-      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.11pre893393.91c9a64ce2a8/nixexprs.tar.xz",
-      "hash": "sha256-ZpXmozTPldgyUyjILammopnda1An2w/66vKrU+1v1Ew="
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1028110.f205b5574fd0/nixexprs.tar.xz",
+      "hash": "sha256-2l8yOB5aYd+05Q9V9Y1YhgbSa1j1o5QX+nvYs5FL80A="
     }
   },
   "version": 8
