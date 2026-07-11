@@ -70,13 +70,16 @@ in
         options = {
           src = lib.options.create {
             description = "The source directory for this input.";
-            type = lib.types.either lib.types.derivation lib.types.path;
+            type = lib.types.nullish (lib.types.either lib.types.derivation lib.types.path);
           };
 
           loader = lib.options.create {
             description = "The loader to use to load this input from its source.";
-            type = lib.types.string;
+            type = lib.types.nullish lib.types.string;
             default.value =
+            if input.name == "__functor" then
+              null
+            else
               let
                 contents = builtins.readDir config.src;
                 files = lib.attrs.filter (name: value: value == "regular") contents;
